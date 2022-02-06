@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 
 @Service
@@ -26,6 +27,7 @@ public class ProductService {
         return this.productRepository.findByCategory(category);
     }
 
-
-
+    public ProductModel findById(String id) {
+        return this.productRepository.findById(id).get();
+    }
 }

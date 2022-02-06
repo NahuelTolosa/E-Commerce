@@ -13,50 +13,41 @@ public class AfterInterception {
 
     @Pointcut("@annotation(com.app.ecommerce.annotation.ServiceMethodAnnotation)")
     void serviceMethods() {}
-
     @After("serviceMethods()")
     void beforeServiceMethods() {
+
     }
-
-
-    /**************************************************************************************/
 
 
     @Pointcut("execution(* com.app.ecommerce.controller.ProductController.findAll(..))")
     void finAll(){}
-
     @After("finAll()")
     void afterFindAll() {
-        logger.info("Se solicito ver un listado de todos los productos.");
+        logger.info("AFTER: Se solicito ver un listado de todos los productos.\n");
     }
-
-
-    /**************************************************************************************/
 
 
     @Pointcut("execution(* com.app.ecommerce.controller.ProductController.findByName(..))")
     void findByName(){}
-
     @After("findByName()")
     void afterFindByName() {
-        logger.info("Se solicito ver los datos de un producto a partir del nombre del mismo.");
+        logger.info("AFTER: Se solicito ver los datos de un producto a partir del nombre del mismo.\n");
     }
-
-
-    /**************************************************************************************/
 
 
     @Pointcut("execution(* com.app.ecommerce.controller.ProductController.findByCategory(..))")
     void findByCategory(){}
-
     @After("findByCategory()")
     void afterFindByCategory() {
-        logger.info("Se solicito ver una lista de productos que pertenezcan a una categoria pasada por parametro.");
+        logger.info("AFTER: Se solicito ver una lista de productos que pertenezcan a una categoria pasada por parametro.\n");
     }
 
 
-    /**************************************************************************************/
-
-
+    @Pointcut("execution(* com.app.ecommerce.controller.ProductController.findById(..))")
+    void findById(){}
+    @After("findById()")
+    void afterFindById() {
+        logger.info("AFTER: Se solicito ver los datos de un producto a partir del ID del mismo.\n");
+    }
 
 }

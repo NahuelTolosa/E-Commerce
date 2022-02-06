@@ -5,16 +5,10 @@ ToDo
 ● Contendrá las rutas necesarias que permitan listar los productos existentes,
 ingresar productos nuevos, borrar y modificar sus detalles, así como interactuar
 con el carrito de compras.
-- CRUD de productos.
+    - CRUD de productos.
 
 ● Se implementará una API RESTful con los verbos GET, POST, PUT y DELETE
 para cumplir con todas las acciones necesarias.
-
-● Con cada Request se deberá registrar un log al finalizar el mismo con AOP.
-
-● En caso de detectar algún error, el servidor enviará mensaje de error con los
-siguientes campos mínimos el id y el detalle del error.
-- Se usa @ControllerAdvice para el Manejo de excepciones
 
 ● Debe brindar al frontend un mecanismo de ingreso autorizado al sistema
 basado en JWT (Json Web Token).
@@ -24,17 +18,12 @@ basado en JWT (Json Web Token).
 ● El usuario podrá registrar sus credenciales de acceso (email y password) para
 luego poder ingresar a su cuenta. Estas credenciales serán guardadas en la
 base de datos MongoDB encriptando la contraseña.
-- CRUD de usuarios. (Lo principal Crear y Obtener)
+    - CRUD de usuarios. (Lo principal Crear y Obtener)
 
 ● El cliente tendrá una sesión activa de usuario con tiempo de expiración
 configurable.
-- JWT se puede configurar el tiempo de vida del token
+    - JWT se puede configurar el tiempo de vida del token
 
-● La arquitectura del servidor estará basada en capas (MVC)
-
-● El servidor podrá tomar configuraciones desde un archivo externo.
-
-- Usar un Config-server para obtener las propiedades
 ● Se enviará un mail a una casilla configurable, por cada registro nuevo de usuario
 y con cada orden de compra generada.
 
@@ -50,25 +39,12 @@ y con cada orden de compra generada.
     consta del nombre completo del cliente, número telefónico, email y
     campo de password duplicado para verificar coincidencia.
 
-    ○ Para listar los productos se usa la ruta ‘/productos’ y devolverá el
-    listado de todos los productos disponibles para la compra.
-
-    ○ La ruta /productos/:categoria devolverá los productos por la
-    categoría requerida. (Pathparam o PathVariable)
-
     ○ Para agregar items al carrito se debe usar la ruta ‘/carrito/add’
         ■ En el cuerpo se debe mandar: code, cantidad.
 
     ○ Para listar los items del carrito se debe usar la ruta ‘/carrito’.
 
     ○ Se podrán modificar y borrar por su id a través de la ruta /carrito/:id.
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-● Flow: Se puede solicitar un producto específico con la ruta /productos/:id,
-donde id es el id del item generado por MongoDB (O usar un código
-generado) y devolver la descripción del producto, precio (campo foto, stock,
-etc opcionales).
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 

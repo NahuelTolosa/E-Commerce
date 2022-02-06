@@ -30,5 +30,10 @@ public class ProductController {
         return this.productService.findByCategory(category);
     }
 
+    @GetMapping("/product/{id}")
+    public ProductModel findById(@PathVariable String id){
+        return this.productService.findById(id);
+    }
+
 
 }
