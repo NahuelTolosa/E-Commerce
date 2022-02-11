@@ -46,11 +46,6 @@ y con cada orden de compra generada.
 
     ○ Se podrán modificar y borrar por su id a través de la ruta /carrito/:id.
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-● Si se ingresa a /productos/:id y el producto no existe en MongoDB,
-debemos responder un mensaje adecuado que indique algo relacionado a
-que el producto no existe.
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -83,9 +78,9 @@ que el producto no existe.
             ● Link para foto (puede almacenarse de modo estático en
             la página en una subruta /images/:productoid )
             (Opcional)
-            ● Precio unitario
-            ● Descripción
-            ● Categoría
+            ● P̶r̶e̶c̶i̶o̶ ̶u̶n̶i̶t̶a̶r̶i̶o̶
+            ● D̶e̶s̶c̶r̶i̶p̶c̶i̶ó̶n̶
+            ● C̶a̶t̶e̶g̶o̶r̶í̶a̶
 
         ■ carrito: orden temporal de compra
             ● Email
@@ -114,6 +109,6 @@ de la orden.
 
 ● Se dispondrá de un archivo de configuración externo con opciones para
 desarrollo y otras para producción. Como parámetros de configuración estará
-el puerto de escucha del servidor, la url de la base de datos, el mail que
-recibirá notificaciones del backend, tiempo de expiración de sesión y los que
+el  ̶p̶u̶e̶r̶t̶o̶ ̶d̶e̶ ̶e̶s̶c̶u̶c̶h̶a̶ ̶d̶e̶l̶ ̶s̶e̶r̶v̶i̶d̶o̶r̶,̶ ̶l̶a̶ ̶u̶r̶l̶ ̶d̶e̶ ̶l̶a̶ ̶b̶a̶s̶e̶ ̶d̶e̶ ̶d̶a̶t̶o̶s̶,̶ ̶e̶l̶ ̶m̶a̶i̶l̶ ̶q̶u̶e̶
+   ̶r̶e̶c̶i̶b̶i̶r̶á̶ ̶n̶o̶t̶i̶f̶i̶c̶a̶c̶i̶o̶n̶e̶s̶ ̶d̶e̶l̶ ̶b̶a̶c̶k̶e̶n̶d̶,̶ tiempo de expiración de sesión y los que
 sea necesario incluir.
