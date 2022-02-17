@@ -50,4 +50,6 @@ public class AfterInterception {
         logger.info("AFTER: Se solicito ver los datos de un producto a partir del ID del mismo.\n");
     }
 
+    //Falta agregar los pointcut del CartController
+
 }

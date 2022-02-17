@@ -17,12 +17,10 @@ import java.util.NoSuchElementException;
 public class ProductController {
 
     private static final Logger logger = LogManager.getLogger(ProductController.class);
-//    private final EmailService emailService;
     private final ProductService productService;
 
     @GetMapping("/all")
     public List<ProductModel> findAll() {
-//        emailService.sendTestEmail();
         return this.productService.findAll();
     }
 

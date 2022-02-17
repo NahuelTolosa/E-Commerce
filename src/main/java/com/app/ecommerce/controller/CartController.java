@@ -2,7 +2,9 @@ package com.app.ecommerce.controller;
 
 import com.app.ecommerce.model.CartItemModel;
 import com.app.ecommerce.model.CartModel;
+import com.app.ecommerce.model.OrderModel;
 import com.app.ecommerce.service.CartService;
+import com.app.ecommerce.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class CartController {
 
     private final CartService cartService;
+    private final OrderService orderService;
 
     @GetMapping("/get")
     public CartModel getCart(@RequestParam String email) {
@@ -38,4 +41,15 @@ public class CartController {
         return this.cartService.decreaseProductQuantity(product,email);
     }
 
+    @DeleteMapping
+    public String deleteCart(@RequestParam String email) {
+        return this.cartService.deleteByEmail(email);
+    }
+
+    @GetMapping("/buy")
+    public OrderModel buyCart(@RequestParam String email, @RequestParam String adress) {
+
+        return this.orderService.createOrder(email,adress);
+
+    }
 }

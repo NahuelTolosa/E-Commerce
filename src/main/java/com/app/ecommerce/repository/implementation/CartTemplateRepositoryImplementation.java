@@ -1,7 +1,7 @@
 package com.app.ecommerce.repository.implementation;
 
 import com.app.ecommerce.model.CartItemModel;
-import com.app.ecommerce.repository.CartTemplateRepository;
+import com.app.ecommerce.repository.interfaces.CartTemplateRepository;
 import com.mongodb.client.result.UpdateResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

@@ -1,7 +1,7 @@
 package com.app.ecommerce.service;
 
 import com.app.ecommerce.model.ProductModel;
-import com.app.ecommerce.repository.ProductRepository;
+import com.app.ecommerce.repository.interfaces.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

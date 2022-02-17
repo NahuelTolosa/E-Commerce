@@ -7,7 +7,10 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.*;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Getter
 @Setter
@@ -19,7 +22,7 @@ public class CartModel {
     @Id
     private String id;
     private String email;
-    private String date;
+    private LocalDateTime date;
     private List<CartItemModel> products = new ArrayList<>();
-    private String adress;
+
 }

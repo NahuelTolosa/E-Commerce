@@ -1,4 +1,4 @@
-package com.app.ecommerce.repository;
+package com.app.ecommerce.repository.interfaces;
 
 import com.app.ecommerce.model.CartItemModel;
 import com.mongodb.client.result.UpdateResult;

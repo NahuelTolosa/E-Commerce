@@ -82,23 +82,18 @@ y con cada orden de compra generada.
             ● D̶e̶s̶c̶r̶i̶p̶c̶i̶ó̶n̶
             ● C̶a̶t̶e̶g̶o̶r̶í̶a̶
 
-        ■ carrito: orden temporal de compra
-            ● Email
-            ● Fecha y hora
-            ● Items con sus cantidades
-            ● Dirección de entrega
+        ■ c̶a̶r̶r̶i̶t̶o̶:̶ ̶o̶r̶d̶e̶n̶ ̶t̶e̶m̶p̶o̶r̶a̶l̶ ̶d̶e̶ ̶c̶o̶m̶p̶r̶a̶
+            ● E̶m̶a̶i̶l̶
+            ● F̶e̶c̶h̶a̶ ̶y̶ ̶h̶o̶r̶a̶
+            ● I̶t̶e̶m̶s̶ ̶c̶o̶n̶ ̶s̶u̶s̶ ̶c̶a̶n̶t̶i̶d̶a̶d̶e̶s̶
 
-        ■ ordenes: las órdenes generadas, que deben incluir los
-        productos, descripciones y los precios al momento de la
-        compra.
-            ● Ítems: las órdenes deben poder tener productos
-            surtidos, cada uno con su cantidad. Por ejemplo:
-            remeras x 2 y gorra x 1
-            ● Número de orden: Se extrae de la cantidad de órdenes
-            almacenadas
-            ● Fecha y hora
-            ● Estado ( por defecto en ‘generada’)
-            ● Email de quién realizó la orden.
+        ■̶ o̶r̶d̶e̶n̶e̶s̶:̶ ̶l̶a̶s̶ ̶ó̶r̶d̶e̶n̶e̶s̶ ̶g̶e̶n̶e̶r̶a̶d̶a̶s̶,̶ ̶q̶u̶e̶ ̶d̶e̶b̶e̶n̶ ̶i̶n̶c̶l̶u̶i̶r̶ ̶l̶o̶s̶ p̶r̶o̶d̶u̶c̶t̶o̶s̶,̶ ̶d̶e̶s̶c̶r̶i̶p̶c̶i̶o̶n̶e̶s̶ ̶y̶ ̶l̶o̶s̶ ̶p̶r̶e̶c̶i̶o̶s̶ ̶a̶l̶ ̶m̶o̶m̶e̶n̶t̶o̶ ̶d̶e̶ ̶l̶a̶ c̶o̶m̶p̶r̶a̶.̶
+            ●̶ Í̶t̶e̶m̶s̶:̶ ̶l̶a̶s̶ ̶ó̶r̶d̶e̶n̶e̶s̶ ̶d̶e̶b̶e̶n̶ ̶p̶o̶d̶e̶r̶ ̶t̶e̶n̶e̶r̶ ̶p̶r̶o̶d̶u̶c̶t̶o̶s̶ s̶u̶r̶t̶i̶d̶o̶s̶,̶ ̶c̶a̶d̶a̶ ̶u̶n̶o̶ ̶c̶o̶n̶ ̶s̶u̶ ̶c̶a̶n̶t̶i̶d̶a̶d̶.̶ ̶P̶o̶r̶ ̶e̶j̶e̶m̶p̶l̶o̶:̶ r̶e̶m̶e̶r̶a̶s̶ ̶x̶ ̶2̶ ̶y̶ ̶g̶o̶r̶r̶a̶ ̶x̶ ̶1̶
+            ●̶ N̶ú̶m̶e̶r̶o̶ ̶d̶e̶ ̶o̶r̶d̶e̶n̶:̶ ̶S̶e̶ ̶e̶x̶t̶r̶a̶e̶ ̶d̶e̶ ̶l̶a̶ ̶c̶a̶n̶t̶i̶d̶a̶d̶ ̶d̶e̶ ̶ó̶r̶d̶e̶n̶e̶s̶ a̶l̶m̶a̶c̶e̶n̶a̶d̶a̶s̶
+            ●̶ F̶e̶c̶h̶a̶ ̶y̶ ̶h̶o̶r̶a̶
+            ●̶ E̶s̶t̶a̶d̶o̶ ̶(̶ ̶p̶o̶r̶ ̶d̶e̶f̶e̶c̶t̶o̶ ̶e̶n̶ ̶‘̶g̶e̶n̶e̶r̶a̶d̶a̶’̶)̶
+            ●̶ E̶m̶a̶i̶l̶ ̶d̶e̶ ̶q̶u̶i̶é̶n̶ ̶r̶e̶a̶l̶i̶z̶ó̶ ̶l̶a̶ ̶o̶r̶d̶e̶n̶.̶
+            ●̶ D̶i̶r̶e̶c̶c̶i̶ó̶n̶ ̶d̶e̶ ̶e̶n̶t̶r̶e̶g̶a̶
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
