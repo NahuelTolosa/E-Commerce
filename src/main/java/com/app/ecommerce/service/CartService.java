@@ -50,29 +50,29 @@ public class CartService {
 
     }
 
-    public String increaseProductQuantity(CartItemModel product, String email) {
+    public Boolean increaseProductQuantity(CartItemModel product, String email) {
 
         UpdateResult updateResult = this.cartTemplateRepository.increaseProductQuantity(product,email);
 
         if (updateResult.getMatchedCount() == 1)
-            return "+1";
+            return true;
 
-        return "Error";
+        return false;
     }
 
-    public String decreaseProductQuantity(CartItemModel product, String email) {
+    public Boolean decreaseProductQuantity(CartItemModel product, String email) {
 
         UpdateResult updateResult = this.cartTemplateRepository.decreaseProductQuantity(product,email);
 
         if (updateResult.getMatchedCount() == 1)
-            return "-1";
+            return true;
 
-        return "Error.";
+        return false;
     }
 
-    public String deleteByEmail(String email) {
+    public Boolean deleteByEmail(String email) {
         this.cartRepository.deleteByEmail(email);
-        return "Carrito eliminado";
+        return true;
     }
 
 }

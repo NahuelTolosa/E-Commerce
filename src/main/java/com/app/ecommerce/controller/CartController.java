@@ -32,17 +32,17 @@ public class CartController {
     }
 
     @PutMapping("/increase")
-    public String increaseProductQuantity(@RequestBody CartItemModel product, @RequestParam String email) {
+    public Boolean increaseProductQuantity(@RequestBody CartItemModel product, @RequestParam String email) {
         return this.cartService.increaseProductQuantity(product,email);
     }
 
     @PutMapping("/decrease")
-    public String decreaseProductQuantity(@RequestBody CartItemModel product, @RequestParam String email) {
+    public Boolean decreaseProductQuantity(@RequestBody CartItemModel product, @RequestParam String email) {
         return this.cartService.decreaseProductQuantity(product,email);
     }
 
     @DeleteMapping
-    public String deleteCart(@RequestParam String email) {
+    public Boolean deleteCart(@RequestParam String email) {
         return this.cartService.deleteByEmail(email);
     }
 

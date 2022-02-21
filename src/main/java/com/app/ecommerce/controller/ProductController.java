@@ -9,14 +9,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/products")
 public class ProductController {
 
-    private static final Logger logger = LogManager.getLogger(ProductController.class);
     private final ProductService productService;
 
     @GetMapping("/all")
@@ -36,12 +34,17 @@ public class ProductController {
 
     @GetMapping("/product/{id}")
     public ProductModel findById(@PathVariable String id){
-        try{
-            return this.productService.findById(id);
-        }catch (NoSuchElementException e){
-            logger.error("Error en el metodo findById() - " + e.toString() + "\n");
-        }
-        return null;
+        return this.productService.findById(id);
+    }
+
+    @PutMapping("/save")
+    public ProductModel save(@RequestBody ProductModel product) {
+        return this.productService.save(product);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteById(@PathVariable String id) {
+        this.productService.deleteById(id);
     }
 
 
