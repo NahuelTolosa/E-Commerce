@@ -37,6 +37,16 @@ public class OrderModel {
         this.products = products;
     }
 
+    public Double getTotal() {
+        Double total = 0.0;
+
+        for (OrderItemModel product : this.getProducts()) {
+            total += product.getTotal();
+        }
+
+        return total;
+    }
+
     private enum Status {
         GENERADA,
         RECHAZADA,

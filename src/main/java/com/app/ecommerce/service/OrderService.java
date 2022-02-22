@@ -19,6 +19,7 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final CartService cartService;
+    private final EmailService emailService;
 
     public OrderModel createOrder(String email, String adress) {
 
@@ -37,6 +38,10 @@ public class OrderService {
             //Borro el carrito
             this.cartService.deleteByEmail(email);
 
+            //Envío el email
+            this.emailService.sendOrderEmail(order);
+
+            //Retorna la oden
             return this.orderRepository.insert(order);
         }
 

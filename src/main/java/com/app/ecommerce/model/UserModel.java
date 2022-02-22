@@ -10,6 +10,7 @@ import javax.validation.constraints.Size;
 
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Document("users")
@@ -19,30 +20,29 @@ public class UserModel {
     private String id;
 
     @NotBlank
-    @Size(max = 20)
-    private String username;
-
-    @NotBlank
-    @Size(max = 20)
-    private String name;
-
-    @NotBlank
-    @Size(max = 20)
-    private String surname;
-
-    @NotBlank
     @Size(max = 50)
     @Email
     private String email;
-
-    @NotBlank
-    @Size(max = 15)
-    private String phone;
 
     @NotBlank
     @Size(max = 120)
     private String password;
 
 //    private String token;
+
+//    @NotBlank
+//    @Size(max = 20)
+//    private String username;
+//
+//    @NotBlank
+//    @Size(max = 20)
+//    private String name;
+//
+//    @NotBlank
+//    @Size(max = 20)
+//    private String surname;
+//    @NotBlank
+//    @Size(max = 15)
+//    private String phone;
 
 }

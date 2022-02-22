@@ -32,8 +32,8 @@ public class ProductController {
         return this.productService.findByCategory(category);
     }
 
-    @GetMapping("/product/{id}")
-    public ProductModel findById(@PathVariable String id){
+    @PostMapping("/product")
+    public ProductModel findById(@RequestParam String id){
         return this.productService.findById(id);
     }
 
